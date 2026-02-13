@@ -1,20 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <title>Planejador Semanal</title>
-    
-
-  </head>
-    
-  <body>
-  <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Planejador Semanal — Estilizado</title>
+<title>Planejador Semanal — Completo com BNCC</title>
 <style>
   body{font-family: Arial, Helvetica, sans-serif;background:#f3f6fb;margin:0;padding:18px;color:#123}
   h1{color:#e55353;text-align:center;margin:6px 0 12px;font-weight:700}
@@ -54,7 +43,6 @@
       <div class="tab" data-day="sexta">Sexta</div>
     </div>
 
-    <!-- Abas -->
     <form id="plannerForm">
       <div id="segunda" class="tab-content active"></div>
       <div id="terca" class="tab-content"></div>
@@ -87,7 +75,6 @@ const habilidades = {
       "(EF01LP10) Produzir textos com apoio do professor, considerando a finalidade e o gênero solicitado.",
       "(EF01LP11) Revisar textos produzidos, com orientação, para adequar à forma convencional da escrita."
     ],
-
     "Matemática": [
       "(EF01MA01) Contar, ler, escrever e ordenar números naturais até 100, compreendendo o princípio do valor posicional.",
       "(EF01MA02) Resolver e elaborar problemas de adição e subtração, utilizando diferentes estratégias.",
@@ -98,7 +85,6 @@ const habilidades = {
       "(EF01MA07) Coletar, organizar e interpretar dados apresentados em listas simples e tabelas.",
       "(EF01MA08) Resolver situações-problema que envolvam contagem e estimativa."
     ],
-
     "Ciências": [
       "(EF01CI01) Identificar as partes do corpo humano e suas funções básicas.",
       "(EF01CI02) Reconhecer hábitos de higiene e alimentação que contribuem para a manutenção da saúde.",
@@ -107,7 +93,6 @@ const habilidades = {
       "(EF01CI05) Identificar elementos da natureza (solo, água, ar, luz, calor) e reconhecer sua importância para os seres vivos.",
       "(EF01CI06) Reconhecer os efeitos do Sol e da chuva nas transformações do ambiente."
     ],
-
     "História": [
       "(EF01HI01) Identificar e descrever aspectos da vida cotidiana de seu grupo social e familiar.",
       "(EF01HI02) Reconhecer mudanças e permanências nas formas de viver e nas brincadeiras ao longo do tempo.",
@@ -115,16 +100,57 @@ const habilidades = {
       "(EF01HI04) Reconhecer documentos e objetos que ajudam a contar a história pessoal e familiar.",
       "(EF01HI05) Identificar e valorizar tradições culturais de seu grupo e de outros grupos presentes na comunidade."
     ],
-
     "Geografia": [
       "(EF01GE01) Reconhecer e representar lugares de vivência (casa, escola e entorno).",
       "(EF01GE02) Descrever e comparar características de lugares conhecidos (tamanho, forma, elementos naturais e construídos).",
       "(EF01GE03) Identificar elementos naturais e construídos no entorno da escola e da moradia.",
       "(EF01GE04) Reconhecer diferentes formas de deslocamento no espaço (a pé, de carro, de ônibus, etc.).",
       "(EF01GE05) Identificar a importância da preservação do ambiente e do uso responsável dos recursos naturais."
+    ],
+    "Arte": [
+      "(EF15AR01) Identificar e apreciar formas distintas das artes visuais tradicionais e contemporâneas, cultivando a percepção, o imaginário, a capacidade de simbolizar e o repertório imagético.",
+      "(EF15AR02) Explorar e reconhecer elementos constitutivos das artes visuais (ponto, linha, forma, cor, espaço, movimento etc.).",
+      "(EF15AR03) Reconhecer e analisar a influência de distintas matrizes estéticas e culturais das artes visuais nas manifestações artísticas das culturas locais, regionais e nacionais.",
+      "(EF15AR04) Experimentar diferentes formas de expressão artística (desenho, pintura, colagem, quadrinhos, dobradura, escultura, modelagem, instalação, vídeo, fotografia etc.), fazendo uso sustentável de materiais, instrumentos, recursos e técnicas convencionais e não convencionais.",
+      "(EF15AR05) Experimentar a criação em artes visuais de modo individual, coletivo e colaborativo, explorando diferentes espaços da escola e da comunidade.",
+      "(EF15AR06) Dialogar sobre a sua criação e as dos colegas, para alcançar sentidos plurais.",
+      "(EF15AR07) Reconhecer algumas categorias do sistema das artes visuais (museus, galerias, instituições, artistas, artesãos, curadores etc.).",
+      "(EF15AR08) Experimentar e apreciar formas distintas de manifestações da dança presentes em diferentes contextos, cultivando a percepção, o imaginário, a capacidade de simbolizar e o repertório corporal.",
+      "(EF15AR09) Estabelecer relações entre as partes do corpo e destas com o todo corporal na construção do movimento dançado.",
+      "(EF15AR10) Experimentar diferentes formas de orientação no espaço (deslocamentos, planos, direções, caminhos etc.) e ritmos de movimento (lento, moderado e rápido) na construção do movimento dançado.",
+      "(EF15AR11) Criar e improvisar movimentos dançados de modo individual, coletivo e colaborativo, considerando os aspectos estruturais, dinâmicos e expressivos dos elementos constitutivos do movimento, com base nos códigos de dança.",
+      "(EF15AR12) Discutir, com respeito e sem preconceito, as experiências pessoais e coletivas em dança vivenciadas na escola, como fonte para a construção de vocabulários e repertórios próprios.",
+      "(EF15AR13) Identificar e apreciar criticamente diversas formas e gêneros de expressão musical, reconhecendo e analisando os usos e as funções da música em diversos contextos de circulação, em especial, aqueles da vida cotidiana.",
+      "(EF15AR14) Perceber e explorar os elementos constitutivos da música (altura, intensidade, timbre, melodia, ritmo etc.), por meio de jogos, brincadeiras, canções e práticas diversas de composição/criação, execução e apreciação musical.",
+      "(EF15AR15) Explorar fontes sonoras diversas, como as existentes no próprio corpo (palmas, voz, percussão corporal), na natureza e em objetos cotidianos, reconhecendo os elementos constitutivos da música e as características de instrumentos musicais variados.",
+      "(EF15AR16) Explorar diferentes formas de registro musical não convencional (representação gráfica de sons, partituras criativas etc.), bem como procedimentos e técnicas de registro em áudio e audiovisual, e reconhecer a notação musical convencional.",
+      "(EF15AR17) Experimentar improvisações, composições e sonorização de histórias, entre outros, utilizando vozes, sons corporais e/ou instrumentos musicais convencionais ou não convencionais, de modo individual, coletivo e colaborativo.",
+      "(EF15AR18) Reconhecer e apreciar formas distintas de manifestações do teatro presentes em diferentes contextos, aprendendo a ver e a ouvir histórias dramatizadas e cultivando a percepção, o imaginário, a capacidade de simbolizar e o repertório ficcional.",
+      "(EF15AR19) Descobrir teatralidades na vida cotidiana, identificando elementos teatrais (variadas entonações de voz, diferentes fisicalidades, diversidade de personagens e narrativas etc.).",
+      "(EF15AR20) Experimentar o trabalho colaborativo, coletivo e autoral em improvisações teatrais e processos narrativos criativos em teatro, explorando desde a teatralidade dos gestos e das ações do cotidiano até elementos de diferentes matrizes estéticas e culturais.",
+      "(EF15AR21) Exercitar a imitação e o faz de conta, ressignificando objetos e fatos e experimentando-se no lugar do outro, ao compor e encenar acontecimentos cênicos, por meio de músicas, imagens, textos ou outros pontos de partida, de forma intencional e reflexiva.",
+      "(EF15AR22) Experimentar possibilidades criativas de movimento e de voz na criação de um personagem teatral, discutindo estereótipos.",
+      "(EF15AR23) Reconhecer e experimentar, em projetos temáticos, as relações processuais entre diversas linguagens artísticas.",
+      "(EF15AR24) Caracterizar e experimentar brinquedos, brincadeiras, jogos, danças, canções e histórias de diferentes matrizes estéticas e culturais.",
+      "(EF15AR25) Conhecer e valorizar o patrimônio cultural, material e imaterial, de culturas diversas, em especial a brasileira, incluindo-se suas matrizes indígenas, africanas e europeias, de diferentes épocas, favorecendo a construção de vocabulário e repertório relativos às diferentes linguagens artísticas.",
+      "(EF15AR26) Explorar diferentes tecnologias e recursos digitais (multimeios, animações, jogos eletrônicos, gravações em áudio e vídeo, fotografia, softwares etc.) nos processos de criação artística."
+    ],
+    "Educação Física": [
+      "(EF12EF01) Experimentar, fruir e recriar diferentes brincadeiras e jogos da cultura popular presentes no contexto comunitário e regional, reconhecendo e respeitando as diferenças individuais de desempenho dos colegas.",
+      "(EF12EF02) Explicar, por meio de múltiplas linguagens (corporal, visual, oral e escrita), as brincadeiras e os jogos populares do contexto comunitário e regional, reconhecendo e valorizando a importância desses jogos e brincadeiras para suas culturas de origem.",
+      "(EF12EF03) Planejar e utilizar estratégias para resolver desafios de brincadeiras e jogos populares do contexto comunitário e regional, com base no reconhecimento das características dessas práticas.",
+      "(EF12EF04) Colaborar na proposição e na produção de alternativas para a prática, em outros momentos e espaços, de brincadeiras e jogos e demais práticas corporais tematizadas na escola, produzindo textos (orais, escritos, audiovisuais) para divulgá-las na escola e na comunidade.",
+      "(EF12EF05) Experimentar e fruir, prezando pelo trabalho coletivo e pelo protagonismo, a prática de esportes de marca e de precisão, identificando os elementos comuns a esses esportes.",
+      "(EF12EF06) Discutir a importância da observação das normas e das regras dos esportes de marca e de precisão para assegurar a integridade própria e as dos demais participantes.",
+      "(EF12EF07) Experimentar, fruir e identificar diferentes elementos básicos da ginástica (equilíbrios, saltos, giros, rotações, acrobacias, com e sem materiais) e da ginástica geral, de forma individual e em pequenos grupos, adotando procedimentos de segurança.",
+      "(EF12EF08) Planejar e utilizar estratégias para a execução de diferentes elementos básicos da ginástica e da ginástica geral.",
+      "(EF12EF09) Participar da ginástica geral, identificando as potencialidades e os limites do corpo, e respeitando as diferenças individuais e de desempenho corporal.",
+      "(EF12EF10) Descrever, por meio de múltiplas linguagens (corporal, oral, escrita e audiovisual), as características dos elementos básicos da ginástica e da ginástica geral, identificando a presença desses elementos em distintas práticas corporais.",
+      "(EF12EF11) Experimentar e fruir diferentes danças do contexto comunitário e regional (rodas cantadas, brincadeiras rítmicas e expressivas), e recriá-las, respeitando as diferenças individuais e de desempenho corporal.",
+      "(EF12EF12) Identificar os elementos constitutivos (ritmo, espaço, gestos) das danças do contexto comunitário e regional, valorizando e respeitando as manifestações de diferentes culturas."
     ]
   },
- "2": {
+  "2": {
     "Língua Portuguesa": [
       "(EF02LP01) Ler e compreender textos narrativos, informativos, instrucionais e poéticos adequados à faixa etária.",
       "(EF02LP02) Reconhecer a função social dos diferentes gêneros textuais em situações reais de uso.",
@@ -137,7 +163,6 @@ const habilidades = {
       "(EF02LP09) Escutar com atenção textos orais, respeitando os turnos de fala e a opinião do outro.",
       "(EF02LP10) Identificar e utilizar diferentes tempos verbais em produções orais e escritas."
     ],
-
     "Matemática": [
       "(EF02MA01) Ler, escrever e ordenar números naturais até 1000.",
       "(EF02MA02) Resolver e elaborar problemas de adição e subtração com reagrupamento.",
@@ -149,7 +174,6 @@ const habilidades = {
       "(EF02MA08) Resolver situações-problema envolvendo o sistema monetário brasileiro.",
       "(EF02MA09) Reconhecer e descrever sequências numéricas e padrões."
     ],
-
     "Ciências": [
       "(EF02CI01) Identificar as partes das plantas e suas funções básicas.",
       "(EF02CI02) Reconhecer que os seres vivos dependem do ambiente e que suas características se relacionam com ele.",
@@ -158,7 +182,6 @@ const habilidades = {
       "(EF02CI05) Identificar hábitos que promovem saúde e bem-estar (alimentação, higiene, sono e atividade física).",
       "(EF02CI06) Reconhecer os cuidados necessários para evitar acidentes domésticos e escolares."
     ],
-
     "História": [
       "(EF02HI01) Identificar acontecimentos da história pessoal e familiar, reconhecendo mudanças e permanências.",
       "(EF02HI02) Reconhecer a escola como espaço de convivência e de construção de memórias coletivas.",
@@ -166,13 +189,54 @@ const habilidades = {
       "(EF02HI04) Valorizar o patrimônio cultural e histórico da comunidade.",
       "(EF02HI05) Identificar fontes históricas (orais, escritas, visuais, materiais) que registram o passado."
     ],
-
     "Geografia": [
       "(EF02GE01) Reconhecer e representar lugares do cotidiano utilizando croquis, plantas e maquetes simples.",
       "(EF02GE02) Identificar e descrever elementos da paisagem (naturais e construídos) em diferentes lugares.",
       "(EF02GE03) Comparar modos de vida e costumes de diferentes grupos sociais e regiões.",
       "(EF02GE04) Identificar e descrever formas de uso e ocupação dos espaços urbanos e rurais.",
       "(EF02GE05) Reconhecer a importância da preservação dos recursos naturais e da coleta seletiva."
+    ],
+    "Arte": [
+      "(EF15AR01) Identificar e apreciar formas distintas das artes visuais tradicionais e contemporâneas, cultivando a percepção, o imaginário, a capacidade de simbolizar e o repertório imagético.",
+      "(EF15AR02) Explorar e reconhecer elementos constitutivos das artes visuais (ponto, linha, forma, cor, espaço, movimento etc.).",
+      "(EF15AR03) Reconhecer e analisar a influência de distintas matrizes estéticas e culturais das artes visuais nas manifestações artísticas das culturas locais, regionais e nacionais.",
+      "(EF15AR04) Experimentar diferentes formas de expressão artística (desenho, pintura, colagem, quadrinhos, dobradura, escultura, modelagem, instalação, vídeo, fotografia etc.), fazendo uso sustentável de materiais, instrumentos, recursos e técnicas convencionais e não convencionais.",
+      "(EF15AR05) Experimentar a criação em artes visuais de modo individual, coletivo e colaborativo, explorando diferentes espaços da escola e da comunidade.",
+      "(EF15AR06) Dialogar sobre a sua criação e as dos colegas, para alcançar sentidos plurais.",
+      "(EF15AR07) Reconhecer algumas categorias do sistema das artes visuais (museus, galerias, instituições, artistas, artesãos, curadores etc.).",
+      "(EF15AR08) Experimentar e apreciar formas distintas de manifestações da dança presentes em diferentes contextos, cultivando a percepção, o imaginário, a capacidade de simbolizar e o repertório corporal.",
+      "(EF15AR09) Estabelecer relações entre as partes do corpo e destas com o todo corporal na construção do movimento dançado.",
+      "(EF15AR10) Experimentar diferentes formas de orientação no espaço (deslocamentos, planos, direções, caminhos etc.) e ritmos de movimento (lento, moderado e rápido) na construção do movimento dançado.",
+      "(EF15AR11) Criar e improvisar movimentos dançados de modo individual, coletivo e colaborativo, considerando os aspectos estruturais, dinâmicos e expressivos dos elementos constitutivos do movimento, com base nos códigos de dança.",
+      "(EF15AR12) Discutir, com respeito e sem preconceito, as experiências pessoais e coletivas em dança vivenciadas na escola, como fonte para a construção de vocabulários e repertórios próprios.",
+      "(EF15AR13) Identificar e apreciar criticamente diversas formas e gêneros de expressão musical, reconhecendo e analisando os usos e as funções da música em diversos contextos de circulação, em especial, aqueles da vida cotidiana.",
+      "(EF15AR14) Perceber e explorar os elementos constitutivos da música (altura, intensidade, timbre, melodia, ritmo etc.), por meio de jogos, brincadeiras, canções e práticas diversas de composição/criação, execução e apreciação musical.",
+      "(EF15AR15) Explorar fontes sonoras diversas, como as existentes no próprio corpo (palmas, voz, percussão corporal), na natureza e em objetos cotidianos, reconhecendo os elementos constitutivos da música e as características de instrumentos musicais variados.",
+      "(EF15AR16) Explorar diferentes formas de registro musical não convencional (representação gráfica de sons, partituras criativas etc.), bem como procedimentos e técnicas de registro em áudio e audiovisual, e reconhecer a notação musical convencional.",
+      "(EF15AR17) Experimentar improvisações, composições e sonorização de histórias, entre outros, utilizando vozes, sons corporais e/ou instrumentos musicais convencionais ou não convencionais, de modo individual, coletivo e colaborativo.",
+      "(EF15AR18) Reconhecer e apreciar formas distintas de manifestações do teatro presentes em diferentes contextos, aprendendo a ver e a ouvir histórias dramatizadas e cultivando a percepção, o imaginário, a capacidade de simbolizar e o repertório ficcional.",
+      "(EF15AR19) Descobrir teatralidades na vida cotidiana, identificando elementos teatrais (variadas entonações de voz, diferentes fisicalidades, diversidade de personagens e narrativas etc.).",
+      "(EF15AR20) Experimentar o trabalho colaborativo, coletivo e autoral em improvisações teatrais e processos narrativos criativos em teatro, explorando desde a teatralidade dos gestos e das ações do cotidiano até elementos de diferentes matrizes estéticas e culturais.",
+      "(EF15AR21) Exercitar a imitação e o faz de conta, ressignificando objetos e fatos e experimentando-se no lugar do outro, ao compor e encenar acontecimentos cênicos, por meio de músicas, imagens, textos ou outros pontos de partida, de forma intencional e reflexiva.",
+      "(EF15AR22) Experimentar possibilidades criativas de movimento e de voz na criação de um personagem teatral, discutindo estereótipos.",
+      "(EF15AR23) Reconhecer e experimentar, em projetos temáticos, as relações processuais entre diversas linguagens artísticas.",
+      "(EF15AR24) Caracterizar e experimentar brinquedos, brincadeiras, jogos, danças, canções e histórias de diferentes matrizes estéticas e culturais.",
+      "(EF15AR25) Conhecer e valorizar o patrimônio cultural, material e imaterial, de culturas diversas, em especial a brasileira, incluindo-se suas matrizes indígenas, africanas e europeias, de diferentes épocas, favorecendo a construção de vocabulário e repertório relativos às diferentes linguagens artísticas.",
+      "(EF15AR26) Explorar diferentes tecnologias e recursos digitais (multimeios, animações, jogos eletrônicos, gravações em áudio e vídeo, fotografia, softwares etc.) nos processos de criação artística."
+    ],
+    "Educação Física": [
+      "(EF12EF01) Experimentar, fruir e recriar diferentes brincadeiras e jogos da cultura popular presentes no contexto comunitário e regional, reconhecendo e respeitando as diferenças individuais de desempenho dos colegas.",
+      "(EF12EF02) Explicar, por meio de múltiplas linguagens (corporal, visual, oral e escrita), as brincadeiras e os jogos populares do contexto comunitário e regional, reconhecendo e valorizando a importância desses jogos e brincadeiras para suas culturas de origem.",
+      "(EF12EF03) Planejar e utilizar estratégias para resolver desafios de brincadeiras e jogos populares do contexto comunitário e regional, com base no reconhecimento das características dessas práticas.",
+      "(EF12EF04) Colaborar na proposição e na produção de alternativas para a prática, em outros momentos e espaços, de brincadeiras e jogos e demais práticas corporais tematizadas na escola, produzindo textos (orais, escritos, audiovisuais) para divulgá-las na escola e na comunidade.",
+      "(EF12EF05) Experimentar e fruir, prezando pelo trabalho coletivo e pelo protagonismo, a prática de esportes de marca e de precisão, identificando os elementos comuns a esses esportes.",
+      "(EF12EF06) Discutir a importância da observação das normas e das regras dos esportes de marca e de precisão para assegurar a integridade própria e as dos demais participantes.",
+      "(EF12EF07) Experimentar, fruir e identificar diferentes elementos básicos da ginástica (equilíbrios, saltos, giros, rotações, acrobacias, com e sem materiais) e da ginástica geral, de forma individual e em pequenos grupos, adotando procedimentos de segurança.",
+      "(EF12EF08) Planejar e utilizar estratégias para a execução de diferentes elementos básicos da ginástica e da ginástica geral.",
+      "(EF12EF09) Participar da ginástica geral, identificando as potencialidades e os limites do corpo, e respeitando as diferenças individuais e de desempenho corporal.",
+      "(EF12EF10) Descrever, por meio de múltiplas linguagens (corporal, oral, escrita e audiovisual), as características dos elementos básicos da ginástica e da ginástica geral, identificando a presença desses elementos em distintas práticas corporais.",
+      "(EF12EF11) Experimentar e fruir diferentes danças do contexto comunitário e regional (rodas cantadas, brincadeiras rítmicas e expressivas), e recriá-las, respeitando as diferenças individuais e de desempenho corporal.",
+      "(EF12EF12) Identificar os elementos constitutivos (ritmo, espaço, gestos) das danças do contexto comunitário e regional, valorizando e respeitando as manifestações de diferentes culturas."
     ]
   },
   "3": {
@@ -188,7 +252,6 @@ const habilidades = {
       "(EF03LP09) Reconhecer e utilizar regras ortográficas convencionais, observando regularidades e irregularidades.",
       "(EF03LP10) Participar de situações de comunicação oral com clareza, escuta atenta e respeito aos turnos de fala."
     ],
-
     "Matemática": [
       "(EF03MA01) Ler, escrever e ordenar números naturais até 10.000.",
       "(EF03MA02) Resolver e elaborar problemas de adição, subtração, multiplicação e divisão com números naturais.",
@@ -201,7 +264,6 @@ const habilidades = {
       "(EF03MA09) Identificar, descrever e continuar sequências numéricas e padrões geométricos.",
       "(EF03MA10) Estimar e comparar medidas, realizando conversões entre unidades usuais."
     ],
-
     "Ciências": [
       "(EF03CI01) Identificar características dos seres vivos e suas necessidades vitais.",
       "(EF03CI02) Reconhecer diferentes ambientes e os seres vivos que neles habitam.",
@@ -211,7 +273,6 @@ const habilidades = {
       "(EF03CI06) Compreender a importância de hábitos saudáveis para o funcionamento do corpo humano.",
       "(EF03CI07) Reconhecer a importância da vacinação, higiene e alimentação equilibrada para a saúde."
     ],
-
     "História": [
       "(EF03HI01) Identificar mudanças e permanências nas formas de organização da vida familiar e comunitária ao longo do tempo.",
       "(EF03HI02) Reconhecer e valorizar o patrimônio histórico e cultural da comunidade e da região.",
@@ -219,7 +280,6 @@ const habilidades = {
       "(EF03HI04) Compreender o papel das tradições e festas populares na formação da identidade cultural.",
       "(EF03HI05) Utilizar fontes históricas (orais, visuais, escritas e materiais) para compreender o passado."
     ],
-
     "Geografia": [
       "(EF03GE01) Reconhecer e representar lugares e trajetos do cotidiano utilizando plantas, croquis e mapas simples.",
       "(EF03GE02) Identificar e descrever elementos naturais e humanizados da paisagem.",
@@ -227,6 +287,51 @@ const habilidades = {
       "(EF03GE04) Compreender as relações entre o campo e a cidade e suas formas de organização do espaço.",
       "(EF03GE05) Reconhecer diferentes tipos de moradia, transporte e trabalho em diversos lugares do Brasil.",
       "(EF03GE06) Valorizar atitudes de preservação ambiental e de uso consciente dos recursos naturais."
+    ],
+    "Arte": [
+      "(EF15AR01) Identificar e apreciar formas distintas das artes visuais tradicionais e contemporâneas, cultivando a percepção, o imaginário, a capacidade de simbolizar e o repertório imagético.",
+      "(EF15AR02) Explorar e reconhecer elementos constitutivos das artes visuais (ponto, linha, forma, cor, espaço, movimento etc.).",
+      "(EF15AR03) Reconhecer e analisar a influência de distintas matrizes estéticas e culturais das artes visuais nas manifestações artísticas das culturas locais, regionais e nacionais.",
+      "(EF15AR04) Experimentar diferentes formas de expressão artística (desenho, pintura, colagem, quadrinhos, dobradura, escultura, modelagem, instalação, vídeo, fotografia etc.), fazendo uso sustentável de materiais, instrumentos, recursos e técnicas convencionais e não convencionais.",
+      "(EF15AR05) Experimentar a criação em artes visuais de modo individual, coletivo e colaborativo, explorando diferentes espaços da escola e da comunidade.",
+      "(EF15AR06) Dialogar sobre a sua criação e as dos colegas, para alcançar sentidos plurais.",
+      "(EF15AR07) Reconhecer algumas categorias do sistema das artes visuais (museus, galerias, instituições, artistas, artesãos, curadores etc.).",
+      "(EF15AR08) Experimentar e apreciar formas distintas de manifestações da dança presentes em diferentes contextos, cultivando a percepção, o imaginário, a capacidade de simbolizar e o repertório corporal.",
+      "(EF15AR09) Estabelecer relações entre as partes do corpo e destas com o todo corporal na construção do movimento dançado.",
+      "(EF15AR10) Experimentar diferentes formas de orientação no espaço (deslocamentos, planos, direções, caminhos etc.) e ritmos de movimento (lento, moderado e rápido) na construção do movimento dançado.",
+      "(EF15AR11) Criar e improvisar movimentos dançados de modo individual, coletivo e colaborativo, considerando os aspectos estruturais, dinâmicos e expressivos dos elementos constitutivos do movimento, com base nos códigos de dança.",
+      "(EF15AR12) Discutir, com respeito e sem preconceito, as experiências pessoais e coletivas em dança vivenciadas na escola, como fonte para a construção de vocabulários e repertórios próprios.",
+      "(EF15AR13) Identificar e apreciar criticamente diversas formas e gêneros de expressão musical, reconhecendo e analisando os usos e as funções da música em diversos contextos de circulação, em especial, aqueles da vida cotidiana.",
+      "(EF15AR14) Perceber e explorar os elementos constitutivos da música (altura, intensidade, timbre, melodia, ritmo etc.), por meio de jogos, brincadeiras, canções e práticas diversas de composição/criação, execução e apreciação musical.",
+      "(EF15AR15) Explorar fontes sonoras diversas, como as existentes no próprio corpo (palmas, voz, percussão corporal), na natureza e em objetos cotidianos, reconhecendo os elementos constitutivos da música e as características de instrumentos musicais variados.",
+      "(EF15AR16) Explorar diferentes formas de registro musical não convencional (representação gráfica de sons, partituras criativas etc.), bem como procedimentos e técnicas de registro em áudio e audiovisual, e reconhecer a notação musical convencional.",
+      "(EF15AR17) Experimentar improvisações, composições e sonorização de histórias, entre outros, utilizando vozes, sons corporais e/ou instrumentos musicais convencionais ou não convencionais, de modo individual, coletivo e colaborativo.",
+      "(EF15AR18) Reconhecer e apreciar formas distintas de manifestações do teatro presentes em diferentes contextos, aprendendo a ver e a ouvir histórias dramatizadas e cultivando a percepção, o imaginário, a capacidade de simbolizar e o repertório ficcional.",
+      "(EF15AR19) Descobrir teatralidades na vida cotidiana, identificando elementos teatrais (variadas entonações de voz, diferentes fisicalidades, diversidade de personagens e narrativas etc.).",
+      "(EF15AR20) Experimentar o trabalho colaborativo, coletivo e autoral em improvisações teatrais e processos narrativos criativos em teatro, explorando desde a teatralidade dos gestos e das ações do cotidiano até elementos de diferentes matrizes estéticas e culturais.",
+      "(EF15AR21) Exercitar a imitação e o faz de conta, ressignificando objetos e fatos e experimentando-se no lugar do outro, ao compor e encenar acontecimentos cênicos, por meio de músicas, imagens, textos ou outros pontos de partida, de forma intencional e reflexiva.",
+      "(EF15AR22) Experimentar possibilidades criativas de movimento e de voz na criação de um personagem teatral, discutindo estereótipos.",
+      "(EF15AR23) Reconhecer e experimentar, em projetos temáticos, as relações processuais entre diversas linguagens artísticas.",
+      "(EF15AR24) Caracterizar e experimentar brinquedos, brincadeiras, jogos, danças, canções e histórias de diferentes matrizes estéticas e culturais.",
+      "(EF15AR25) Conhecer e valorizar o patrimônio cultural, material e imaterial, de culturas diversas, em especial a brasileira, incluindo-se suas matrizes indígenas, africanas e europeias, de diferentes épocas, favorecendo a construção de vocabulário e repertório relativos às diferentes linguagens artísticas.",
+      "(EF15AR26) Explorar diferentes tecnologias e recursos digitais (multimeios, animações, jogos eletrônicos, gravações em áudio e vídeo, fotografia, softwares etc.) nos processos de criação artística."
+    ],
+    "Educação Física": [
+      "(EF35EF01) Experimentar e fruir brincadeiras e jogos populares do Brasil e do mundo, incluindo aqueles de matriz indígena e africana, e recriá-los, valorizando a importância desse patrimônio histórico cultural.",
+      "(EF35EF02) Planejar e utilizar estratégias para possibilitar a participação segura de todos os alunos em brincadeiras e jogos populares do Brasil e de matriz indígena e africana.",
+      "(EF35EF03) Descrever, por meio de múltiplas linguagens (corporal, oral, escrita, audiovisual), as brincadeiras e os jogos populares do Brasil e de matriz indígena e africana, explicando suas características e a importância desse patrimônio histórico cultural na preservação das diferentes culturas.",
+      "(EF35EF04) Recriar, individual e coletivamente, e experimentar, na escola e fora dela, brincadeiras e jogos populares do Brasil e do mundo, incluindo aqueles de matriz indígena e africana, e demais práticas corporais tematizadas na escola, adequando-as aos espaços públicos disponíveis.",
+      "(EF35EF05) Experimentar e fruir diversos tipos de esportes de campo e taco, rede/parede e invasão, identificando seus elementos comuns e criando estratégias individuais e coletivas básicas para sua execução, prezando pelo trabalho coletivo e pelo protagonismo.",
+      "(EF35EF06) Diferenciar os conceitos de jogo e esporte, identificando as características que os constituem na contemporaneidade e suas manifestações (profissional e comunitária/lazer).",
+      "(EF35EF07) Experimentar e fruir, de forma coletiva, combinações de diferentes elementos da ginástica geral (equilíbrios, saltos, giros, rotações, acrobacias, com e sem materiais), propondo coreografias com diferentes temas do cotidiano.",
+      "(EF35EF08) Planejar e utilizar estratégias para resolver desafios na execução de elementos básicos de apresentações coletivas de ginástica geral, reconhecendo as potencialidades e os limites do corpo e adotando procedimentos de segurança.",
+      "(EF35EF09) Experimentar, recriar e fruir danças populares do Brasil e do mundo e danças de matriz indígena e africana, valorizando e respeitando os diferentes sentidos e significados dessas danças em suas culturas de origem.",
+      "(EF35EF10) Comparar e identificar os elementos constitutivos comuns e diferentes (ritmo, espaço, gestos) em danças populares do Brasil e do mundo e danças de matriz indígena e africana.",
+      "(EF35EF11) Formular e utilizar estratégias para a execução de elementos constitutivos das danças populares do Brasil e do mundo, e das danças de matriz indígena e africana.",
+      "(EF35EF12) Identificar situações de injustiça e preconceito geradas e/ou presentes no contexto das danças e demais práticas corporais e discutir alternativas para superá-las.",
+      "(EF35EF13) Experimentar, fruir e recriar diferentes lutas presentes no contexto comunitário e regional e lutas de matriz indígena e africana.",
+      "(EF35EF14) Planejar e utilizar estratégias básicas das lutas do contexto comunitário e regional e lutas de matriz indígena e africana experimentadas, respeitando o colega como oponente e as normas de segurança.",
+      "(EF35EF15) Identificar as características das lutas do contexto comunitário e regional e lutas de matriz indígena e africana, reconhecendo as diferenças entre lutas e brigas e entre lutas e as demais práticas corporais."
     ]
   },
   "4": {
@@ -242,7 +347,6 @@ const habilidades = {
       "(EF04LP09) Participar de situações de comunicação oral, expressando-se com clareza e respeito à escuta dos colegas.",
       "(EF04LP10) Reconhecer e utilizar recursos de linguagem figurada e expressiva em textos literários."
     ],
-
     "Matemática": [
       "(EF04MA01) Ler, escrever e ordenar números naturais até a ordem das centenas de milhar.",
       "(EF04MA02) Resolver e elaborar problemas com as quatro operações, envolvendo diferentes significados.",
@@ -255,7 +359,6 @@ const habilidades = {
       "(EF04MA09) Resolver problemas com o sistema monetário, envolvendo trocas e cálculos com cédulas e moedas.",
       "(EF04MA10) Reconhecer e representar regularidades e padrões numéricos e geométricos."
     ],
-
     "Ciências": [
       "(EF04CI01) Compreender as relações entre os seres vivos e o ambiente em que vivem.",
       "(EF04CI02) Identificar as características e os ciclos de vida dos animais e das plantas.",
@@ -265,7 +368,6 @@ const habilidades = {
       "(EF04CI06) Analisar a importância dos recursos naturais e atitudes de preservação ambiental.",
       "(EF04CI07) Identificar materiais e suas propriedades, compreendendo suas transformações e usos no cotidiano."
     ],
-
     "História": [
       "(EF04HI01) Compreender as transformações ocorridas no Brasil do período colonial ao Império.",
       "(EF04HI02) Reconhecer o papel dos povos indígenas, africanos e europeus na formação da sociedade brasileira.",
@@ -273,7 +375,6 @@ const habilidades = {
       "(EF04HI04) Identificar diferentes fontes históricas e compreender como elas contribuem para o conhecimento do passado.",
       "(EF04HI05) Valorizar o patrimônio histórico, cultural e natural da comunidade, reconhecendo a importância da preservação."
     ],
-
     "Geografia": [
       "(EF04GE01) Ler, interpretar e produzir mapas, croquis e plantas, utilizando legendas e escalas simples.",
       "(EF04GE02) Reconhecer e analisar as principais características do território brasileiro: relevo, rios, vegetação e clima.",
@@ -281,9 +382,54 @@ const habilidades = {
       "(EF04GE04) Analisar as atividades econômicas e as formas de ocupação do espaço urbano e rural.",
       "(EF04GE05) Reconhecer a importância da conservação dos recursos naturais e o papel da ação humana nas transformações da paisagem.",
       "(EF04GE06) Identificar e valorizar diferentes culturas e modos de vida presentes no território brasileiro."
+    ],
+    "Arte": [
+      "(EF15AR01) Identificar e apreciar formas distintas das artes visuais tradicionais e contemporâneas, cultivando a percepção, o imaginário, a capacidade de simbolizar e o repertório imagético.",
+      "(EF15AR02) Explorar e reconhecer elementos constitutivos das artes visuais (ponto, linha, forma, cor, espaço, movimento etc.).",
+      "(EF15AR03) Reconhecer e analisar a influência de distintas matrizes estéticas e culturais das artes visuais nas manifestações artísticas das culturas locais, regionais e nacionais.",
+      "(EF15AR04) Experimentar diferentes formas de expressão artística (desenho, pintura, colagem, quadrinhos, dobradura, escultura, modelagem, instalação, vídeo, fotografia etc.), fazendo uso sustentável de materiais, instrumentos, recursos e técnicas convencionais e não convencionais.",
+      "(EF15AR05) Experimentar a criação em artes visuais de modo individual, coletivo e colaborativo, explorando diferentes espaços da escola e da comunidade.",
+      "(EF15AR06) Dialogar sobre a sua criação e as dos colegas, para alcançar sentidos plurais.",
+      "(EF15AR07) Reconhecer algumas categorias do sistema das artes visuais (museus, galerias, instituições, artistas, artesãos, curadores etc.).",
+      "(EF15AR08) Experimentar e apreciar formas distintas de manifestações da dança presentes em diferentes contextos, cultivando a percepção, o imaginário, a capacidade de simbolizar e o repertório corporal.",
+      "(EF15AR09) Estabelecer relações entre as partes do corpo e destas com o todo corporal na construção do movimento dançado.",
+      "(EF15AR10) Experimentar diferentes formas de orientação no espaço (deslocamentos, planos, direções, caminhos etc.) e ritmos de movimento (lento, moderado e rápido) na construção do movimento dançado.",
+      "(EF15AR11) Criar e improvisar movimentos dançados de modo individual, coletivo e colaborativo, considerando os aspectos estruturais, dinâmicos e expressivos dos elementos constitutivos do movimento, com base nos códigos de dança.",
+      "(EF15AR12) Discutir, com respeito e sem preconceito, as experiências pessoais e coletivas em dança vivenciadas na escola, como fonte para a construção de vocabulários e repertórios próprios.",
+      "(EF15AR13) Identificar e apreciar criticamente diversas formas e gêneros de expressão musical, reconhecendo e analisando os usos e as funções da música em diversos contextos de circulação, em especial, aqueles da vida cotidiana.",
+      "(EF15AR14) Perceber e explorar os elementos constitutivos da música (altura, intensidade, timbre, melodia, ritmo etc.), por meio de jogos, brincadeiras, canções e práticas diversas de composição/criação, execução e apreciação musical.",
+      "(EF15AR15) Explorar fontes sonoras diversas, como as existentes no próprio corpo (palmas, voz, percussão corporal), na natureza e em objetos cotidianos, reconhecendo os elementos constitutivos da música e as características de instrumentos musicais variados.",
+      "(EF15AR16) Explorar diferentes formas de registro musical não convencional (representação gráfica de sons, partituras criativas etc.), bem como procedimentos e técnicas de registro em áudio e audiovisual, e reconhecer a notação musical convencional.",
+      "(EF15AR17) Experimentar improvisações, composições e sonorização de histórias, entre outros, utilizando vozes, sons corporais e/ou instrumentos musicais convencionais ou não convencionais, de modo individual, coletivo e colaborativo.",
+      "(EF15AR18) Reconhecer e apreciar formas distintas de manifestações do teatro presentes em diferentes contextos, aprendendo a ver e a ouvir histórias dramatizadas e cultivando a percepção, o imaginário, a capacidade de simbolizar e o repertório ficcional.",
+      "(EF15AR19) Descobrir teatralidades na vida cotidiana, identificando elementos teatrais (variadas entonações de voz, diferentes fisicalidades, diversidade de personagens e narrativas etc.).",
+      "(EF15AR20) Experimentar o trabalho colaborativo, coletivo e autoral em improvisações teatrais e processos narrativos criativos em teatro, explorando desde a teatralidade dos gestos e das ações do cotidiano até elementos de diferentes matrizes estéticas e culturais.",
+      "(EF15AR21) Exercitar a imitação e o faz de conta, ressignificando objetos e fatos e experimentando-se no lugar do outro, ao compor e encenar acontecimentos cênicos, por meio de músicas, imagens, textos ou outros pontos de partida, de forma intencional e reflexiva.",
+      "(EF15AR22) Experimentar possibilidades criativas de movimento e de voz na criação de um personagem teatral, discutindo estereótipos.",
+      "(EF15AR23) Reconhecer e experimentar, em projetos temáticos, as relações processuais entre diversas linguagens artísticas.",
+      "(EF15AR24) Caracterizar e experimentar brinquedos, brincadeiras, jogos, danças, canções e histórias de diferentes matrizes estéticas e culturais.",
+      "(EF15AR25) Conhecer e valorizar o patrimônio cultural, material e imaterial, de culturas diversas, em especial a brasileira, incluindo-se suas matrizes indígenas, africanas e europeias, de diferentes épocas, favorecendo a construção de vocabulário e repertório relativos às diferentes linguagens artísticas.",
+      "(EF15AR26) Explorar diferentes tecnologias e recursos digitais (multimeios, animações, jogos eletrônicos, gravações em áudio e vídeo, fotografia, softwares etc.) nos processos de criação artística."
+    ],
+    "Educação Física": [
+      "(EF35EF01) Experimentar e fruir brincadeiras e jogos populares do Brasil e do mundo, incluindo aqueles de matriz indígena e africana, e recriá-los, valorizando a importância desse patrimônio histórico cultural.",
+      "(EF35EF02) Planejar e utilizar estratégias para possibilitar a participação segura de todos os alunos em brincadeiras e jogos populares do Brasil e de matriz indígena e africana.",
+      "(EF35EF03) Descrever, por meio de múltiplas linguagens (corporal, oral, escrita, audiovisual), as brincadeiras e os jogos populares do Brasil e de matriz indígena e africana, explicando suas características e a importância desse patrimônio histórico cultural na preservação das diferentes culturas.",
+      "(EF35EF04) Recriar, individual e coletivamente, e experimentar, na escola e fora dela, brincadeiras e jogos populares do Brasil e do mundo, incluindo aqueles de matriz indígena e africana, e demais práticas corporais tematizadas na escola, adequando-as aos espaços públicos disponíveis.",
+      "(EF35EF05) Experimentar e fruir diversos tipos de esportes de campo e taco, rede/parede e invasão, identificando seus elementos comuns e criando estratégias individuais e coletivas básicas para sua execução, prezando pelo trabalho coletivo e pelo protagonismo.",
+      "(EF35EF06) Diferenciar os conceitos de jogo e esporte, identificando as características que os constituem na contemporaneidade e suas manifestações (profissional e comunitária/lazer).",
+      "(EF35EF07) Experimentar e fruir, de forma coletiva, combinações de diferentes elementos da ginástica geral (equilíbrios, saltos, giros, rotações, acrobacias, com e sem materiais), propondo coreografias com diferentes temas do cotidiano.",
+      "(EF35EF08) Planejar e utilizar estratégias para resolver desafios na execução de elementos básicos de apresentações coletivas de ginástica geral, reconhecendo as potencialidades e os limites do corpo e adotando procedimentos de segurança.",
+      "(EF35EF09) Experimentar, recriar e fruir danças populares do Brasil e do mundo e danças de matriz indígena e africana, valorizando e respeitando os diferentes sentidos e significados dessas danças em suas culturas de origem.",
+      "(EF35EF10) Comparar e identificar os elementos constitutivos comuns e diferentes (ritmo, espaço, gestos) em danças populares do Brasil e do mundo e danças de matriz indígena e africana.",
+      "(EF35EF11) Formular e utilizar estratégias para a execução de elementos constitutivos das danças populares do Brasil e do mundo, e das danças de matriz indígena e africana.",
+      "(EF35EF12) Identificar situações de injustiça e preconceito geradas e/ou presentes no contexto das danças e demais práticas corporais e discutir alternativas para superá-las.",
+      "(EF35EF13) Experimentar, fruir e recriar diferentes lutas presentes no contexto comunitário e regional e lutas de matriz indígena e africana.",
+      "(EF35EF14) Planejar e utilizar estratégias básicas das lutas do contexto comunitário e regional e lutas de matriz indígena e africana experimentadas, respeitando o colega como oponente e as normas de segurança.",
+      "(EF35EF15) Identificar as características das lutas do contexto comunitário e regional e lutas de matriz indígena e africana, reconhecendo as diferenças entre lutas e brigas e entre lutas e as demais práticas corporais."
     ]
   },
- "5": {
+  "5": {
     "Língua Portuguesa": [
       "(EF05LP01) Ler e compreender textos de diferentes gêneros, identificando tema, finalidade e público-alvo.",
       "(EF05LP02) Analisar a estrutura e as características dos gêneros narrativo, descritivo, informativo e opinativo.",
@@ -296,7 +442,6 @@ const habilidades = {
       "(EF05LP09) Participar de situações orais, expressando opiniões e escutando com respeito os interlocutores.",
       "(EF05LP10) Reconhecer a literatura como forma de expressão artística e cultural."
     ],
-
     "Matemática": [
       "(EF05MA01) Ler, escrever e ordenar números naturais e decimais em diferentes contextos.",
       "(EF05MA02) Resolver problemas que envolvam as quatro operações com números naturais e decimais.",
@@ -309,7 +454,6 @@ const habilidades = {
       "(EF05MA09) Reconhecer e utilizar relações geométricas entre figuras planas e espaciais.",
       "(EF05MA10) Identificar e utilizar regularidades e padrões numéricos e geométricos na resolução de problemas."
     ],
-
     "Ciências": [
       "(EF05CI01) Compreender o funcionamento do corpo humano e a inter-relação entre os sistemas orgânicos.",
       "(EF05CI02) Reconhecer as principais características e adaptações dos seres vivos em diferentes ambientes.",
@@ -319,7 +463,6 @@ const habilidades = {
       "(EF05CI06) Analisar a importância da água, do solo e do ar para a manutenção da vida.",
       "(EF05CI07) Reconhecer a importância da ciência e da tecnologia para a melhoria da qualidade de vida e do meio ambiente."
     ],
-
     "História": [
       "(EF05HI01) Compreender o processo de formação do território brasileiro e a atuação dos povos indígenas, africanos e europeus.",
       "(EF05HI02) Analisar o período colonial brasileiro, reconhecendo as relações de trabalho e de poder estabelecidas.",
@@ -327,7 +470,6 @@ const habilidades = {
       "(EF05HI04) Compreender o processo de abolição da escravidão e a construção da cidadania no Brasil.",
       "(EF05HI05) Reconhecer a importância da memória, do patrimônio histórico e da diversidade cultural na identidade nacional."
     ],
-
     "Geografia": [
       "(EF05GE01) Ler, interpretar e representar mapas, gráficos e outras formas de representação do espaço geográfico.",
       "(EF05GE02) Compreender a organização do território brasileiro e suas divisões políticas e regionais.",
@@ -335,162 +477,253 @@ const habilidades = {
       "(EF05GE04) Reconhecer as principais atividades econômicas do Brasil e suas relações com o meio ambiente.",
       "(EF05GE05) Identificar e discutir os impactos ambientais e sociais decorrentes da ação humana.",
       "(EF05GE06) Valorizar a diversidade cultural, étnica e regional do povo brasileiro e o respeito às diferenças."
+    ],
+    "Arte": [
+      "(EF15AR01) Identificar e apreciar formas distintas das artes visuais tradicionais e contemporâneas, cultivando a percepção, o imaginário, a capacidade de simbolizar e o repertório imagético.",
+      "(EF15AR02) Explorar e reconhecer elementos constitutivos das artes visuais (ponto, linha, forma, cor, espaço, movimento etc.).",
+      "(EF15AR03) Reconhecer e analisar a influência de distintas matrizes estéticas e culturais das artes visuais nas manifestações artísticas das culturas locais, regionais e nacionais.",
+      "(EF15AR04) Experimentar diferentes formas de expressão artística (desenho, pintura, colagem, quadrinhos, dobradura, escultura, modelagem, instalação, vídeo, fotografia etc.), fazendo uso sustentável de materiais, instrumentos, recursos e técnicas convencionais e não convencionais.",
+      "(EF15AR05) Experimentar a criação em artes visuais de modo individual, coletivo e colaborativo, explorando diferentes espaços da escola e da comunidade.",
+      "(EF15AR06) Dialogar sobre a sua criação e as dos colegas, para alcançar sentidos plurais.",
+      "(EF15AR07) Reconhecer algumas categorias do sistema das artes visuais (museus, galerias, instituições, artistas, artesãos, curadores etc.).",
+      "(EF15AR08) Experimentar e apreciar formas distintas de manifestações da dança presentes em diferentes contextos, cultivando a percepção, o imaginário, a capacidade de simbolizar e o repertório corporal.",
+      "(EF15AR09) Estabelecer relações entre as partes do corpo e destas com o todo corporal na construção do movimento dançado.",
+      "(EF15AR10) Experimentar diferentes formas de orientação no espaço (deslocamentos, planos, direções, caminhos etc.) e ritmos de movimento (lento, moderado e rápido) na construção do movimento dançado.",
+      "(EF15AR11) Criar e improvisar movimentos dançados de modo individual, coletivo e colaborativo, considerando os aspectos estruturais, dinâmicos e expressivos dos elementos constitutivos do movimento, com base nos códigos de dança.",
+      "(EF15AR12) Discutir, com respeito e sem preconceito, as experiências pessoais e coletivas em dança vivenciadas na escola, como fonte para a construção de vocabulários e repertórios próprios.",
+      "(EF15AR13) Identificar e apreciar criticamente diversas formas e gêneros de expressão musical, reconhecendo e analisando os usos e as funções da música em diversos contextos de circulação, em especial, aqueles da vida cotidiana.",
+      "(EF15AR14) Perceber e explorar os elementos constitutivos da música (altura, intensidade, timbre, melodia, ritmo etc.), por meio de jogos, brincadeiras, canções e práticas diversas de composição/criação, execução e apreciação musical.",
+      "(EF15AR15) Explorar fontes sonoras diversas, como as existentes no próprio corpo (palmas, voz, percussão corporal), na natureza e em objetos cotidianos, reconhecendo os elementos constitutivos da música e as características de instrumentos musicais variados.",
+      "(EF15AR16) Explorar diferentes formas de registro musical não convencional (representação gráfica de sons, partituras criativas etc.), bem como procedimentos e técnicas de registro em áudio e audiovisual, e reconhecer a notação musical convencional.",
+      "(EF15AR17) Experimentar improvisações, composições e sonorização de histórias, entre outros, utilizando vozes, sons corporais e/ou instrumentos musicais convencionais ou não convencionais, de modo individual, coletivo e colaborativo.",
+      "(EF15AR18) Reconhecer e apreciar formas distintas de manifestações do teatro presentes em diferentes contextos, aprendendo a ver e a ouvir histórias dramatizadas e cultivando a percepção, o imaginário, a capacidade de simbolizar e o repertório ficcional.",
+      "(EF15AR19) Descobrir teatralidades na vida cotidiana, identificando elementos teatrais (variadas entonações de voz, diferentes fisicalidades, diversidade de personagens e narrativas etc.).",
+      "(EF15AR20) Experimentar o trabalho colaborativo, coletivo e autoral em improvisações teatrais e processos narrativos criativos em teatro, explorando desde a teatralidade dos gestos e das ações do cotidiano até elementos de diferentes matrizes estéticas e culturais.",
+      "(EF15AR21) Exercitar a imitação e o faz de conta, ressignificando objetos e fatos e experimentando-se no lugar do outro, ao compor e encenar acontecimentos cênicos, por meio de músicas, imagens, textos ou outros pontos de partida, de forma intencional e reflexiva.",
+      "(EF15AR22) Experimentar possibilidades criativas de movimento e de voz na criação de um personagem teatral, discutindo estereótipos.",
+      "(EF15AR23) Reconhecer e experimentar, em projetos temáticos, as relações processuais entre diversas linguagens artísticas.",
+      "(EF15AR24) Caracterizar e experimentar brinquedos, brincadeiras, jogos, danças, canções e histórias de diferentes matrizes estéticas e culturais.",
+      "(EF15AR25) Conhecer e valorizar o patrimônio cultural, material e imaterial, de culturas diversas, em especial a brasileira, incluindo-se suas matrizes indígenas, africanas e europeias, de diferentes épocas, favorecendo a construção de vocabulário e repertório relativos às diferentes linguagens artísticas.",
+      "(EF15AR26) Explorar diferentes tecnologias e recursos digitais (multimeios, animações, jogos eletrônicos, gravações em áudio e vídeo, fotografia, softwares etc.) nos processos de criação artística."
+    ],
+    "Educação Física": [
+      "(EF35EF01) Experimentar e fruir brincadeiras e jogos populares do Brasil e do mundo, incluindo aqueles de matriz indígena e africana, e recriá-los, valorizando a importância desse patrimônio histórico cultural.",
+      "(EF35EF02) Planejar e utilizar estratégias para possibilitar a participação segura de todos os alunos em brincadeiras e jogos populares do Brasil e de matriz indígena e africana.",
+      "(EF35EF03) Descrever, por meio de múltiplas linguagens (corporal, oral, escrita, audiovisual), as brincadeiras e os jogos populares do Brasil e de matriz indígena e africana, explicando suas características e a importância desse patrimônio histórico cultural na preservação das diferentes culturas.",
+      "(EF35EF04) Recriar, individual e coletivamente, e experimentar, na escola e fora dela, brincadeiras e jogos populares do Brasil e do mundo, incluindo aqueles de matriz indígena e africana, e demais práticas corporais tematizadas na escola, adequando-as aos espaços públicos disponíveis.",
+      "(EF35EF05) Experimentar e fruir diversos tipos de esportes de campo e taco, rede/parede e invasão, identificando seus elementos comuns e criando estratégias individuais e coletivas básicas para sua execução, prezando pelo trabalho coletivo e pelo protagonismo.",
+      "(EF35EF06) Diferenciar os conceitos de jogo e esporte, identificando as características que os constituem na contemporaneidade e suas manifestações (profissional e comunitária/lazer).",
+      "(EF35EF07) Experimentar e fruir, de forma coletiva, combinações de diferentes elementos da ginástica geral (equilíbrios, saltos, giros, rotações, acrobacias, com e sem materiais), propondo coreografias com diferentes temas do cotidiano.",
+      "(EF35EF08) Planejar e utilizar estratégias para resolver desafios na execução de elementos básicos de apresentações coletivas de ginástica geral, reconhecendo as potencialidades e os limites do corpo e adotando procedimentos de segurança.",
+      "(EF35EF09) Experimentar, recriar e fruir danças populares do Brasil e do mundo e danças de matriz indígena e africana, valorizando e respeitando os diferentes sentidos e significados dessas danças em suas culturas de origem.",
+      "(EF35EF10) Comparar e identificar os elementos constitutivos comuns e diferentes (ritmo, espaço, gestos) em danças populares do Brasil e do mundo e danças de matriz indígena e africana.",
+      "(EF35EF11) Formular e utilizar estratégias para a execução de elementos constitutivos das danças populares do Brasil e do mundo, e das danças de matriz indígena e africana.",
+      "(EF35EF12) Identificar situações de injustiça e preconceito geradas e/ou presentes no contexto das danças e demais práticas corporais e discutir alternativas para superá-las.",
+      "(EF35EF13) Experimentar, fruir e recriar diferentes lutas presentes no contexto comunitário e regional e lutas de matriz indígena e africana.",
+      "(EF35EF14) Planejar e utilizar estratégias básicas das lutas do contexto comunitário e regional e lutas de matriz indígena e africana experimentadas, respeitando o colega como oponente e as normas de segurança.",
+      "(EF35EF15) Identificar as características das lutas do contexto comunitário e regional e lutas de matriz indígena e africana, reconhecendo as diferenças entre lutas e brigas e entre lutas e as demais práticas corporais."
     ]
   }
 };
+
 const objetosDeConhecimento = {
-  /* ----------------- 1º ANO ----------------- */
   "1": {
     "Matemática": [
       "Contagem de rotina",
       "Contagem ascendente e descendente",
-      "Reconhecimento de números no contexto diário: indicação de quantidades, indicação de ordem ou indicação de código",
-      "Quantificação de elementos de uma coleção: estimativas, contagem um a um, pareamento e comparação",
+      "Reconhecimento de números no contexto diário",
+      "Quantificação de elementos de uma coleção",
       "Leitura, escrita e comparação de números naturais (até 100)",
       "Reta numérica",
       "Construção de fatos básicos da adição",
       "Composição e decomposição de números naturais",
-      "Padrões figurais e numéricos: investigação de regularidades",
-      "Sequências recursivas simples (mais 1, mais 2 etc.)",
-      "Localização de objetos e pessoas no espaço (vocabulário: perto, longe, etc.)",
-      "Figuras geométricas planas e espaciais: reconhecimento simples",
-      "Medidas de comprimento, massa e capacidade (unidades não convencionais)",
-      "Medidas de tempo: dia, semana, uso do calendário",
-      "Sistema monetário brasileiro: reconhecimento de cédulas e moedas",
-      "Noção de acaso (introdução)",
-      "Leitura de tabelas e gráficos de colunas simples",
-      "Coleta e organização de informações (registros pessoais)"
+      "Padrões figurais e numéricos",
+      "Sequências recursivas simples",
+      "Localização de objetos e pessoas no espaço",
+      "Figuras geométricas planas e espaciais",
+      "Medidas de comprimento, massa e capacidade",
+      "Medidas de tempo",
+      "Sistema monetário brasileiro",
+      "Noção de acaso",
+      "Leitura de tabelas e gráficos",
+      "Coleta e organização de informações"
     ],
     "Língua Portuguesa": [
       "Protocolos de leitura",
       "Correspondência fonema-grafema",
-      "Construção do sistema alfabético/ Convenções da escrita",
-      "Conhecimento do alfabeto do português do Brasil",
-      "Segmentação de palavras / Classificação por número de sílabas",
-      "Decodificação / Fluência de leitura",
+      "Construção do sistema alfabético",
+      "Conhecimento do alfabeto",
+      "Segmentação de palavras",
+      "Decodificação e fluência de leitura",
       "Escuta atenta",
       "Produção de texto oral",
       "Escrita autônoma e compartilhada",
       "Contagem de histórias"
     ],
     "Ciências": [
-      "Características dos materiais (observação)",
+      "Características dos materiais",
       "Corpo humano: noções básicas; higiene",
-      "Seres vivos no ambiente: plantas (identificação)",
-      "Características e desenvolvimento de animais (observação simples)",
-      "Observação do céu: dia e noite (noções básicas)",
-      "Produção de som (noções básicas)"
+      "Seres vivos no ambiente",
+      "Características e desenvolvimento de animais",
+      "Observação do céu: dia e noite",
+      "Produção de som"
     ],
     "História": [
-      "As fases da vida e a ideia de temporalidade (passado, presente, futuro)",
-      "As diferentes formas de organização da família e da comunidade: vínculos e relações",
+      "As fases da vida e a ideia de temporalidade",
+      "Organização da família e da comunidade",
       "A escola e a diversidade do grupo social",
-      "A vida em casa e na escola: jogos e brincadeiras como interação",
-      "Formas de registrar e narrar histórias (memória)"
+      "Jogos e brincadeiras como interação",
+      "Formas de registrar e narrar histórias"
     ],
     "Geografia": [
-      "O modo de vida das crianças em diferentes lugares",
+      "O modo de vida das crianças",
       "Situações de convívio em diferentes lugares",
       "Pontos de referência",
-      "Localização, representação simples de lugares (casa, escola, bairro)",
+      "Localização e representação de lugares",
       "Condições de vida nos lugares de vivência",
-      "A cidade e o campo: aproximações e diferenças (noções iniciais)"
+      "A cidade e o campo"
+    ],
+    "Arte": [
+      "Contextos e práticas",
+      "Elementos da linguagem",
+      "Matrizes estéticas e culturais",
+      "Materialidades",
+      "Processos de criação",
+      "Sistemas da linguagem",
+      "Notação e registro musical",
+      "Patrimônio cultural",
+      "Arte e tecnologia"
+    ],
+    "Educação Física": [
+      "Brincadeiras e jogos da cultura popular presentes no contexto comunitário e regional",
+      "Esportes de marca e esportes de precisão",
+      "Ginástica geral",
+      "Danças do contexto comunitário e regional"
     ]
   },
-
-  /* ----------------- 2º ANO ----------------- */
   "2": {
     "Matemática": [
       "Quantificação: estimativas e agrupamentos",
       "Leitura, escrita e comparação de números naturais até 1000",
-      "Composição e decomposição de números naturais (até 1000)",
+      "Composição e decomposição de números naturais",
       "Fatos fundamentais da adição e subtração",
-      "Problemas com significados da adição e subtração (juntar, retirar, comparar)",
-      "Problemas envolvendo adição de parcelas iguais (introdução à multiplicação)",
-      "Identificação de padrões e regularidades em sequências",
-      "Medidas de tempo: calendário e leitura de horas digitais",
-      "Medida de comprimento: unidades não padronizadas e padronizadas",
-      "Medidas de capacidade e massa (unidades não convencionais e convencionais)",
-      "Sistema monetário brasileiro: reconhecimento e equivalências básicas",
-      "Coleta, classificação e representação de dados simples"
+      "Problemas com significados da adição e subtração",
+      "Problemas envolvendo adição de parcelas iguais",
+      "Identificação de padrões e regularidades",
+      "Medidas de tempo: calendário e horas",
+      "Medida de comprimento",
+      "Medidas de capacidade e massa",
+      "Sistema monetário brasileiro",
+      "Coleta, classificação e representação de dados"
     ],
     "Língua Portuguesa": [
-      "Pontuação (uso de ponto e interrogação)",
-      "Sinonímia e antonímia / Morfologia inicial",
+      "Pontuação",
+      "Sinonímia e antonímia",
       "Compreensão em leitura",
       "Escrita compartilhada",
-      "Formas de composição de narrativas (simples)",
+      "Formas de composição de narrativas",
       "Planejamento de texto"
     ],
     "Ciências": [
-      "Escalas de tempo (sequências e eventos)",
-      "Propriedades e usos dos materiais; prevenção de acidentes",
+      "Escalas de tempo",
+      "Propriedades e usos dos materiais",
       "Observação de plantas: partes e funções",
-      "Nutrição e hábitos saudáveis (noções básicas)",
-      "Misturas e transformações simples (reversíveis e não-reversíveis)"
+      "Nutrição e hábitos saudáveis",
+      "Misturas e transformações simples"
     ],
     "História": [
-      "Reconhecer mudanças e permanências na comunidade",
-      "Identificar memórias coletivas escolares",
+      "Mudanças e permanências na comunidade",
+      "Memórias coletivas escolares",
       "Experiências da comunidade no tempo e no espaço"
     ],
     "Geografia": [
-      "Representar lugares do cotidiano com croquis simples",
-      "Identificar elementos da paisagem local",
-      "Os usos dos recursos naturais: solo e água no campo e na cidade",
-      "Localização, orientação e representação espacial (noções)"
+      "Representação de lugares com croquis simples",
+      "Elementos da paisagem local",
+      "Usos dos recursos naturais",
+      "Localização, orientação e representação espacial"
+    ],
+    "Arte": [
+      "Contextos e práticas",
+      "Elementos da linguagem",
+      "Matrizes estéticas e culturais",
+      "Materialidades",
+      "Processos de criação",
+      "Sistemas da linguagem",
+      "Notação e registro musical",
+      "Patrimônio cultural",
+      "Arte e tecnologia"
+    ],
+    "Educação Física": [
+      "Brincadeiras e jogos da cultura popular presentes no contexto comunitário e regional",
+      "Esportes de marca e esportes de precisão",
+      "Ginástica geral",
+      "Danças do contexto comunitário e regional"
     ]
   },
-
-  /* ----------------- 3º ANO ----------------- */
   "3": {
     "Matemática": [
       "Leitura, escrita e comparação de números naturais até 10.000",
-      "Composição e decomposição de números (até 10.000)",
-      "Multiplicação e divisão: conceitos iniciais (agrupamentos, repartição)",
-      "Frações iniciais: metade, terça parte, quarta parte",
-      "Sequências recursivas e identificação de elementos ausentes",
-      "Localização e movimentação no espaço; esboço de roteiros e plantas simples",
-      "Figuras geométricas planas e espaciais: reconhecimento",
-      "Medidas de comprimento, capacidade e massa com instrumentos",
-      "Coleta, classificação e representação de dados (tabelas e gráficos simples)"
+      "Composição e decomposição de números",
+      "Multiplicação e divisão: conceitos iniciais",
+      "Frações iniciais",
+      "Sequências recursivas",
+      "Localização e movimentação no espaço",
+      "Figuras geométricas planas e espaciais",
+      "Medidas de comprimento, capacidade e massa",
+      "Coleta, classificação e representação de dados"
     ],
     "Língua Portuguesa": [
-      "Estratégias de leitura (antecipação, inferência)",
+      "Estratégias de leitura",
       "Revisão e edição de textos",
       "Formação do leitor literário",
       "Leitura colaborativa e autônoma",
-      "Compreensão em leitura (inferências)"
+      "Compreensão em leitura"
     ],
     "Ciências": [
-      "Características dos seres vivos e suas necessidades (plantas e animais)",
+      "Características dos seres vivos",
       "Cadeias alimentares simples",
-      "Transformações na natureza (crescimento, decomposição)",
-      "Funções do corpo humano e hábitos saudáveis",
+      "Transformações na natureza",
+      "Funções do corpo humano",
       "Propriedades físicas dos materiais"
     ],
     "História": [
       "Patrimônio local e tradições culturais",
-      "Mudanças nas formas de trabalho e convivência",
-      "Formas de registrar e narrar histórias; fontes orais e materiais"
+      "Mudanças nas formas de trabalho",
+      "Formas de registrar e narrar histórias"
     ],
     "Geografia": [
-      "Leitura e produção de mapas e croquis simples",
-      "Elementos naturais e humanizados da paisagem",
-      "Pontos cardeais e orientação básica",
-      "A cidade e o campo: diferenças e semelhanças"
+      "Leitura e produção de mapas",
+      "Elementos naturais e humanizados",
+      "Pontos cardeais e orientação",
+      "A cidade e o campo"
+    ],
+    "Arte": [
+      "Contextos e práticas",
+      "Elementos da linguagem",
+      "Matrizes estéticas e culturais",
+      "Materialidades",
+      "Processos de criação",
+      "Sistemas da linguagem",
+      "Notação e registro musical",
+      "Patrimônio cultural",
+      "Arte e tecnologia"
+    ],
+    "Educação Física": [
+      "Brincadeiras e jogos populares do Brasil e do mundo; Brincadeiras e jogos de matriz indígena e africana",
+      "Esportes de campo e taco; Esportes de rede/parede; Esportes de invasão",
+      "Ginástica geral",
+      "Danças do Brasil e do mundo; Danças de matriz indígena e africana",
+      "Lutas do contexto comunitário e regional; Lutas de matriz indígena e africana"
     ]
   },
-
-  /* ----------------- 4º ANO ----------------- */
   "4": {
     "Matemática": [
-      "Leitura, escrita e ordenação de números naturais de até 100.000 (ordens maiores)",
+      "Leitura, escrita e ordenação de números naturais",
       "Frações: representação e comparação",
-      "Perímetro e área: conceitos e cálculos básicos",
-      "Procedimentos de cálculo (mental e escrito) com números naturais",
-      "Propriedades das operações e estratégias de cálculo",
-      "Figuras geométricas planas e espaciais: estudo de propriedades"
+      "Perímetro e área",
+      "Procedimentos de cálculo",
+      "Propriedades das operações",
+      "Figuras geométricas planas e espaciais"
     ],
     "Língua Portuguesa": [
       "Produção de textos com coerência e coesão",
@@ -499,69 +732,102 @@ const objetosDeConhecimento = {
       "Recursos expressivos e linguagem figurada"
     ],
     "Ciências": [
-      "Ciclos da natureza e relações entre seres vivos",
-      "Recursos naturais e preservação (água, solo)",
-      "Misturas e transformações: estudo mais aprofundado",
-      "Ciclo hidrológico e consumo consciente, reciclagem"
+      "Ciclos da natureza",
+      "Recursos naturais e preservação",
+      "Misturas e transformações",
+      "Ciclo hidrológico e reciclagem"
     ],
     "História": [
-      "Ocupação do território brasileiro (colonial e imperfeito)",
-      "Fontes e registros históricos; construção da memória",
-      "Processos migratórios e formação de comunidades locais"
+      "Ocupação do território brasileiro",
+      "Fontes e registros históricos",
+      "Processos migratórios"
     ],
     "Geografia": [
-      "Mapas, escalas e análise do território brasileiro",
-      "Uso e ocupação do espaço urbano e rural",
-      "Produção, circulação e consumo; impactos das atividades humanas",
-      "Representações cartográficas (mapas, imagens de satélite)"
+      "Mapas, escalas e análise do território",
+      "Uso e ocupação do espaço",
+      "Produção, circulação e consumo",
+      "Representações cartográficas"
+    ],
+    "Arte": [
+      "Contextos e práticas",
+      "Elementos da linguagem",
+      "Matrizes estéticas e culturais",
+      "Materialidades",
+      "Processos de criação",
+      "Sistemas da linguagem",
+      "Notação e registro musical",
+      "Patrimônio cultural",
+      "Arte e tecnologia"
+    ],
+    "Educação Física": [
+      "Brincadeiras e jogos populares do Brasil e do mundo; Brincadeiras e jogos de matriz indígena e africana",
+      "Esportes de campo e taco; Esportes de rede/parede; Esportes de invasão",
+      "Ginástica geral",
+      "Danças do Brasil e do mundo; Danças de matriz indígena e africana",
+      "Lutas do contexto comunitário e regional; Lutas de matriz indígena e africana"
     ]
   },
-
-  /* ----------------- 5º ANO ----------------- */
   "5": {
     "Matemática": [
-      "Sistema de numeração decimal: leitura, escrita e ordenação de números (até 6 ordens)",
-      "Números racionais: frações e decimais; equivalências",
-      "Operações com decimais e resolução de problemas",
-      "Porcentagens básicas e representações",
-      "Plano cartesiano (1º quadrante) e deslocamentos",
-      "Medidas: comprimento, área, massa, tempo, temperatura",
-      "Probabilidade básica e espaço amostral",
-      "Leitura e interpretação de tabelas, gráficos de barras e linhas"
+      "Sistema de numeração decimal",
+      "Números racionais: frações e decimais",
+      "Operações com decimais",
+      "Porcentagens básicas",
+      "Plano cartesiano",
+      "Medidas diversas",
+      "Probabilidade básica",
+      "Leitura e interpretação de tabelas e gráficos"
     ],
     "Língua Portuguesa": [
-      "Pesquisa e produção de textos mais elaborados",
-      "Variação linguística e adequação ao contexto",
-      "Textos dramáticos e formas poéticas visuais",
+      "Pesquisa e produção de textos",
+      "Variação linguística",
+      "Textos dramáticos e formas poéticas",
       "Coesão textual e articuladores"
     ],
     "Ciências": [
-      "Funcionamento do corpo humano e integração dos sistemas",
-      "Ecossistemas, cadeias alimentares e biodiversidade",
-      "Água, solo, problemas ambientais e uso sustentável",
-      "Noções de energia e fontes renováveis"
+      "Funcionamento do corpo humano",
+      "Ecossistemas e biodiversidade",
+      "Água, solo e problemas ambientais",
+      "Noções de energia"
     ],
     "História": [
-      "Formação do território brasileiro: povos indígenas, colonização e escravidão",
-      "Processos migratórios e movimentos populacionais",
-      "Memória, patrimônio cultural e manifestação das tradições"
+      "Formação do território brasileiro",
+      "Processos migratórios",
+      "Memória e patrimônio cultural"
     ],
     "Geografia": [
-      "Organização do território e divisões político-administrativas do Brasil",
-      "Atividades econômicas e impactos ambientais",
-      "Território, redes e urbanização; qualidade ambiental",
-      "Gestão pública da qualidade de vida e participação social"
+      "Organização do território brasileiro",
+      "Atividades econômicas",
+      "Território, redes e urbanização",
+      "Gestão pública e participação social"
+    ],
+    "Arte": [
+      "Contextos e práticas",
+      "Elementos da linguagem",
+      "Matrizes estéticas e culturais",
+      "Materialidades",
+      "Processos de criação",
+      "Sistemas da linguagem",
+      "Notação e registro musical",
+      "Patrimônio cultural",
+      "Arte e tecnologia"
+    ],
+    "Educação Física": [
+      "Brincadeiras e jogos populares do Brasil e do mundo; Brincadeiras e jogos de matriz indígena e africana",
+      "Esportes de campo e taco; Esportes de rede/parede; Esportes de invasão",
+      "Ginástica geral",
+      "Danças do Brasil e do mundo; Danças de matriz indígena e africana",
+      "Lutas do contexto comunitário e regional; Lutas de matriz indígena e africana"
     ]
   }
 };
 
-/* ------------- Configuração do planner (dias, aulas por dia, matérias, anos) ------------- */
+/* ------------- Configuração do planner ------------- */
 const dias = ["segunda","terca","quarta","quinta","sexta"];
-const aulasPorDia = 3;
+const aulasPorDia = 4;
 const materias = ["","Matemática","Língua Portuguesa","Ciências","História","Geografia","Arte","Educação Física"];
 const anos = ["","1","2","3","4","5"];
 
-/* ------------ Criação dos blocos de aula por aba -------------- */
 function createLessonBlock(day, index) {
   const div = document.createElement('div');
   div.className = 'lesson';
@@ -569,31 +835,26 @@ function createLessonBlock(day, index) {
     <h4 style="margin:0;color:#6a5acd">Aula ${index}</h4>
     <label>Ano</label>
     <select class="sel-ano">${anos.map(a=>`<option value="${a}">${a? a+'º ano':''}</option>`).join('')}</select>
-    <label>Matéria</label>
+    <label>Componente Curricular</label>
     <select class="sel-mat">${materias.map(m=>`<option value="${m}">${m}</option>`).join('')}</select>
     <label>Habilidades (BNCC)</label>
     <select class="sel-hab" multiple size="4"></select>
     <label>Objeto(s) de Conhecimento</label>
     <select class="sel-obj" multiple size="4"></select>
     <label>Recursos utilizados</label><textarea class="fld-res"></textarea>
-    <label>Objetivos</label><textarea class="fld-obj"></textarea>
     <label>Desenvolvimento</label><textarea class="fld-des"></textarea>
-    <label>Instrumentos avaliativos</label><textarea class="fld-inst"></textarea>
   `;
-  // ouvir mudanças
   div.querySelector('.sel-ano').addEventListener('change', ()=>updateSelectors(div));
   div.querySelector('.sel-mat').addEventListener('change', ()=>updateSelectors(div));
   return div;
 }
 
-/* Atualiza tanto habilidades quanto objetos de conhecimento conforme ano+matéria */
 function updateSelectors(block){
   const ano = block.querySelector('.sel-ano').value;
   const mat = block.querySelector('.sel-mat').value;
   const selHab = block.querySelector('.sel-hab');
   const selObj = block.querySelector('.sel-obj');
 
-  // limpar
   selHab.innerHTML = '';
   selObj.innerHTML = '';
 
@@ -603,7 +864,6 @@ function updateSelectors(block){
     return;
   }
 
-  // Habilidades
   const listHab = (habilidades[ano] && habilidades[ano][mat]) || [];
   if(listHab.length === 0){
     selHab.innerHTML = `<option value="">Nenhuma habilidade cadastrada</option>`;
@@ -614,7 +874,6 @@ function updateSelectors(block){
     });
   }
 
-  // Objetos de conhecimento (prioridade: se houver para essa matéria e ano)
   const listObj = (objetosDeConhecimento[ano] && objetosDeConhecimento[ano][mat]) || [];
   if(listObj.length === 0){
     selObj.innerHTML = `<option value="">Nenhum objeto cadastrado</option>`;
@@ -626,7 +885,6 @@ function updateSelectors(block){
   }
 }
 
-/* Monta as abas com as aulas */
 dias.forEach(d=>{
   const container = document.getElementById(d);
   for(let i=1;i<=aulasPorDia;i++){
@@ -634,7 +892,6 @@ dias.forEach(d=>{
   }
 });
 
-/* Tabs UI */
 document.querySelectorAll('.tab').forEach(tab=>{
   tab.addEventListener('click', ()=>{
     document.querySelectorAll('.tab, .tab-content').forEach(el=>el.classList.remove('active'));
@@ -643,19 +900,15 @@ document.querySelectorAll('.tab').forEach(tab=>{
   });
 });
 
-/* Preencher modelo (exemplo) */
 document.getElementById('fillSample').addEventListener('click', ()=>{
   dias.forEach((d,di)=>{
     const blocks = document.getElementById(d).querySelectorAll('.lesson');
     blocks.forEach((b,bi)=>{
-      // ano rotativo 1..5
       const anoVal = ((di % 5) + 1).toString();
       b.querySelector('.sel-ano').value = anoVal;
-      // mat alterna entre Matemática e Língua Portuguesa
       const matVal = (bi % 2 === 0) ? 'Matemática' : 'Língua Portuguesa';
       b.querySelector('.sel-mat').value = matVal;
       updateSelectors(b);
-      // seleciona até 2 habilidades e 1 objeto (se houver)
       const hab = b.querySelector('.sel-hab');
       for(let i=0;i<hab.options.length && i<2;i++) hab.options[i].selected = true;
       const obj = b.querySelector('.sel-obj');
@@ -668,12 +921,10 @@ document.getElementById('fillSample').addEventListener('click', ()=>{
   });
 });
 
-/* Escape HTML simples */
 function escapeHtml(str){
   return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-/* Monta HTML para o .doc (com estilo inline) - paisagem via @page */
 function buildStyledDocHtml(){
   const dataInicio = document.getElementById('dataInicio').value || '';
   const dataFim = document.getElementById('dataFim').value || '';
@@ -728,7 +979,6 @@ function buildStyledDocHtml(){
   return html;
 }
 
-/* Download .doc (Word) */
 document.getElementById('downloadStyled').addEventListener('click', ()=>{
   const html = buildStyledDocHtml();
   const blob = new Blob(["\ufeff", html], {type: 'application/msword'});
@@ -744,8 +994,4 @@ document.getElementById('downloadStyled').addEventListener('click', ()=>{
 });
 </script>
 </body>
-</html>
-    
-  </body>
-  
 </html>
