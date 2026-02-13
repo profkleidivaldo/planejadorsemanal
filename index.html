@@ -914,9 +914,7 @@ document.getElementById('fillSample').addEventListener('click', ()=>{
       const obj = b.querySelector('.sel-obj');
       if(obj.options.length>0) obj.options[0].selected = true;
       b.querySelector('.fld-res').value = 'Livro didático; Quadro; Folha de atividade';
-      b.querySelector('.fld-obj').value = 'Compreender e aplicar o conceito estudado.';
       b.querySelector('.fld-des').value = 'Exploração guiada, discussão em grupo e exercícios práticos.';
-      b.querySelector('.fld-inst').value = 'Atividade em folha; Observação; Avaliação formativa';
     });
   });
 });
@@ -945,8 +943,8 @@ function buildStyledDocHtml(){
   html += `<div class="meta"><div>Período: ${dataInicio} → ${dataFim}</div><div>Professor(a): ${escapeHtml(professor)}</div></div>`;
 
   html += `<table class="form"><thead><tr>
-    <th>Dia / Aula</th><th>Ano</th><th>Matéria</th><th>Habilidades (BNCC)</th>
-    <th>Objeto(s) de Conhecimento</th><th>Recursos</th><th>Objetivos</th><th>Desenvolvimento</th><th>Instrumentos avaliativos</th>
+    <th>Dia / Aula</th><th>Ano</th><th>Componente Curricular</th><th>Habilidades (BNCC)</th>
+    <th>Objeto(s) de Conhecimento</th><th>Recursos</th><th>Desenvolvimento</th>
   </tr></thead><tbody>`;
 
   dias.forEach(d=>{
@@ -958,9 +956,7 @@ function buildStyledDocHtml(){
       const habSel = Array.from(b.querySelector('.sel-hab').selectedOptions).map(o=>escapeHtml(o.value)).join('<br/>') || '';
       const objSel = Array.from(b.querySelector('.sel-obj').selectedOptions).map(o=>escapeHtml(o.value)).join('<br/>') || '';
       const rec = escapeHtml(b.querySelector('.fld-res').value || '');
-      const obj = escapeHtml(b.querySelector('.fld-obj').value || '');
       const des = escapeHtml(b.querySelector('.fld-des').value || '');
-      const inst = escapeHtml(b.querySelector('.fld-inst').value || '');
       html += `<tr>
         <td><strong>${diaTexto}</strong><div style="color:#666;font-size:11px">Aula ${idx+1}</div></td>
         <td>${ano}</td>
@@ -968,9 +964,7 @@ function buildStyledDocHtml(){
         <td>${habSel}</td>
         <td>${objSel}</td>
         <td>${rec.replace(/\n/g,'<br/>')}</td>
-        <td>${obj.replace(/\n/g,'<br/>')}</td>
         <td>${des.replace(/\n/g,'<br/>')}</td>
-        <td>${inst.replace(/\n/g,'<br/>')}</td>
       </tr>`;
     });
   });
